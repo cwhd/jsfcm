@@ -1,0 +1,1138 @@
+[
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "c57cda9f-bbea-43b3-a50e-37bcb3d69f5c",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "one",
+          "outVLabel": "three",
+          "inV": "TestModel-one",
+          "outV": "TestModel-three",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "62bcc1e8-0a95-434a-95c9-70e388f41bcd",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "three",
+          "outVLabel": "fo",
+          "inV": "TestModel-three",
+          "outV": "TestModel-fo",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "864454ad-6567-4493-a697-3ad4d1288cd8",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "three",
+          "outVLabel": "tow",
+          "inV": "TestModel-three",
+          "outV": "TestModel-tow",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-tow",
+          "label": "tow",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "67fa01e3-247b-4b8e-9920-aaf41a96ffeb",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-tow|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "a5a54504-15dd-4035-813e-392766b379fd",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "f01dc4cb-fde2-438a-b9ee-7a3b6a6d977c",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "three",
+          "outVLabel": "one",
+          "inV": "TestModel-three",
+          "outV": "TestModel-one",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "f01dc4cb-fde2-438a-b9ee-7a3b6a6d977c",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "three",
+          "outVLabel": "one",
+          "inV": "TestModel-three",
+          "outV": "TestModel-one",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "00be9b5c-9379-4761-a8d2-cb292f6aae40",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "tow",
+          "outVLabel": "one",
+          "inV": "TestModel-tow",
+          "outV": "TestModel-one",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-tow",
+          "label": "tow",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "67fa01e3-247b-4b8e-9920-aaf41a96ffeb",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-tow|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "a5a54504-15dd-4035-813e-392766b379fd",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "6f1f9cbf-02a1-4d27-b5fe-b081805fa3ad",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "fo",
+          "outVLabel": "one",
+          "inV": "TestModel-fo",
+          "outV": "TestModel-one",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "0fdce7be-4dea-4bff-8044-5add89138583",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "one",
+          "outVLabel": "fo",
+          "inV": "TestModel-one",
+          "outV": "TestModel-fo",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "c57cda9f-bbea-43b3-a50e-37bcb3d69f5c",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "one",
+          "outVLabel": "three",
+          "inV": "TestModel-one",
+          "outV": "TestModel-three",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-tow",
+          "label": "tow",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "67fa01e3-247b-4b8e-9920-aaf41a96ffeb",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-tow|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "a5a54504-15dd-4035-813e-392766b379fd",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "864454ad-6567-4493-a697-3ad4d1288cd8",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "three",
+          "outVLabel": "tow",
+          "inV": "TestModel-three",
+          "outV": "TestModel-tow",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-tow",
+          "label": "tow",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "67fa01e3-247b-4b8e-9920-aaf41a96ffeb",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-tow|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "a5a54504-15dd-4035-813e-392766b379fd",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "ea77b634-1059-4d58-8bdd-d0c2c3ff3535",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "fo",
+          "outVLabel": "tow",
+          "inV": "TestModel-fo",
+          "outV": "TestModel-tow",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-tow",
+          "label": "tow",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "67fa01e3-247b-4b8e-9920-aaf41a96ffeb",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-tow|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "a5a54504-15dd-4035-813e-392766b379fd",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "00be9b5c-9379-4761-a8d2-cb292f6aae40",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "tow",
+          "outVLabel": "one",
+          "inV": "TestModel-tow",
+          "outV": "TestModel-one",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "62bcc1e8-0a95-434a-95c9-70e388f41bcd",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "three",
+          "outVLabel": "fo",
+          "inV": "TestModel-three",
+          "outV": "TestModel-fo",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-three",
+          "label": "three",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "d0416ff7-a6b1-4fd2-b9af-b8744cf66b29",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-three|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "841942bb-d835-415d-8e7b-43a53e271e84",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "0fdce7be-4dea-4bff-8044-5add89138583",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "one",
+          "outVLabel": "fo",
+          "inV": "TestModel-one",
+          "outV": "TestModel-fo",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "ea77b634-1059-4d58-8bdd-d0c2c3ff3535",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "fo",
+          "outVLabel": "tow",
+          "inV": "TestModel-fo",
+          "outV": "TestModel-tow",
+          "properties": {
+            "weight": 1
+          }
+        },
+        {
+          "id": "TestModel-tow",
+          "label": "tow",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "67fa01e3-247b-4b8e-9920-aaf41a96ffeb",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-tow|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "a5a54504-15dd-4035-813e-392766b379fd",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "labels": [
+        [],
+        [],
+        []
+      ],
+      "objects": [
+        {
+          "id": "TestModel-fo",
+          "label": "fo",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "74db330b-3d0a-4970-8cc7-91c1ff70ef9f",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-fo|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "f71bea5c-789c-413c-baae-57f2e2165c94",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "6f1f9cbf-02a1-4d27-b5fe-b081805fa3ad",
+          "label": "affects",
+          "type": "edge",
+          "inVLabel": "fo",
+          "outVLabel": "one",
+          "inV": "TestModel-fo",
+          "outV": "TestModel-one",
+          "properties": {
+            "weight": -1
+          }
+        },
+        {
+          "id": "TestModel-one",
+          "label": "one",
+          "type": "vertex",
+          "properties": {
+            "conceptType": [
+              {
+                "id": "b4e28286-9a74-4265-858c-c5c4964d5e21",
+                "value": "input"
+              }
+            ],
+            "modelName": [
+              {
+                "id": "TestModel-one|modelName",
+                "value": "TestModel"
+              }
+            ],
+            "visualProps": [
+              {
+                "id": "13d88313-7255-4906-a3ba-6136859f95ed",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]

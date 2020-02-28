@@ -1,0 +1,22 @@
+{
+    "epochs" :3,
+    "act": "gaussian",
+    "values": [
+    {
+        "node":"TestModel-three",
+        "value": 1
+    },
+    {
+        "node":"TestModel-one",
+        "value": 1
+    },
+    {
+        "node":"TestModel-fo",
+        "value": 1
+    },
+    {
+        "node":"TestModel-tow",
+        "value": 1
+    }
+]
+}
