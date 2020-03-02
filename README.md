@@ -9,3 +9,12 @@ This project is server code, the front end is a [conversational interface](https
 ## More to come
 
 This project is just getting started, check back for updates!
+
+### Possible graph stuff
+
+https://github.com/cytoscape/cytoscape.js
+https://github.com/jacomyal/sigma.js
+https://github.com/mrpandey/d3graphTheory
+https://github.com/d3/d3-force
+https://github.com/danielcaldas/react-d3-graph
+https://github.com/fkling/JSNetworkX
