@@ -6,6 +6,8 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "gremlin": "^3.4.6"
+  },
   "devDependencies": {}
 }

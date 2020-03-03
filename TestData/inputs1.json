@@ -1,6 +1,7 @@
 {
     "epochs" :3,
     "act": "gaussian",
+    "modelName":"TestModel",
     "values": [
     {
         "node":"TestModel-three",

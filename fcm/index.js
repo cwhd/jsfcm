@@ -1,67 +1,72 @@
-const data = require('../TestData/query1.json');
-const inputs = require('../TestData/inputs1.json');
+//you can use these for testing...
+//const data = require('../TestData/query1.json');
+//const inputs = require('../TestData/inputs1.json');
 const structureBuilder = require('../SharedCode/structureBuilder');
 const fcmBaseCalculator = require('../SharedCode/fcmBaseCalculator');
 const squashingFunctions = require('../SharedCode/squashingFunctions');
+const client = require("../SharedCode/db/gremlin-api-db")
 
 module.exports = function (context, req) {
 
     context.log('Gaussian FCM triggered');
-    //TODO first get the data from CosmosDB
 
-    /*
-    if (req.query.name || (req.body && req.body.name)) {
-        context.res = {
-            // status: 200, 
-            body: "Hello " + (req.query.name || req.body.name)
-        };
-    }
-    else {
+    if (!req.body) {
         context.res = {
             status: 400,
-            body: "Please pass a name on the query string or in the request body"
+            body: "You must post inputs to this service"
         };
-    }
-    */
+    } else {
+        console.log(process.env["cosmosEndpoint"]);
+        /*
+        endpoint: process.env["cosmosEndpoint"],
+        primaryKey: process.env["primaryKey"],
+        database: process.env["fcm"],
+        collection: process.env["cosell"]        
+        */
+        let inputs = req.body;
 
-    let concepts = [];
-    let connections = [];
+        let concepts = [];
+        let connections = [];
 
-    concepts = structureBuilder.buildConcepts(data, inputs);
-    connections = structureBuilder.buildConnections(data, concepts);
+        let results = [];
+        let epochs = inputs.epochs;
 
-    let results = [];
-    let epochs = inputs.epochs;
+        client.open().then(() =>{
+            client.submit("g.V().has('modelName', name).bothE().otherV().path()", { name: inputs.modelName }).then(function (result) {
+                console.log("Result: %s\n", JSON.stringify(result._items));
 
-    for(var e = 0; e < epochs; e++) {
-        //console.log("Epoch #" + e);
-
-        concepts = fcmBaseCalculator.initialValueCalculation(concepts);
-        
-        switch(inputs.act.toLowerCase()) {
-            case "gaussian":
-                concepts = squashingFunctions.gaussian(concepts);
-        }
-
-        for (var c in concepts) {
-            concepts[c].previousValue = concepts[c].value;
-            concepts[c].value = concepts[c].nextValue;
-            concepts[c].nextValue = 0;
-            results.push({
-                "node": concepts[c].id,
-                "value": concepts[c].value,
-                "iteration" : e
+                concepts = structureBuilder.buildConcepts(result._items, inputs);
+                connections = structureBuilder.buildConnections(result._items, concepts);
+            
+                for(var e = 0; e < epochs; e++) {
+                    concepts = fcmBaseCalculator.initialValueCalculation(concepts);
+                    
+                    switch(inputs.act.toLowerCase()) {
+                        case "gaussian":
+                            concepts = squashingFunctions.gaussian(concepts);
+                    }
+            
+                    for (var c in concepts) {
+                        concepts[c].previousValue = concepts[c].value;
+                        concepts[c].value = concepts[c].nextValue;
+                        concepts[c].nextValue = 0;
+                        results.push({
+                            "node": concepts[c].id,
+                            "value": concepts[c].value,
+                            "iteration" : e
+                        });
+                    }
+                }
+            
+                context.res = {
+                    headers: {
+                        'content-type':'application/json'
+                    },
+                    status: 200,
+                    body: { results: results }
+                };
+                context.done();
             });
-        }
+        });
     }
-
-    context.res = {
-        headers: {
-            'content-type':'application/json'
-        },
-        status: 200,
-        body: { results: results }
-    };
-
-    context.done();
 };
