@@ -48,5 +48,29 @@ module.exports = {
             }
         }
         return connections;
+    },
+
+    buildCytoStructure: function(concepts, connections) {
+        //TODO return something like this:
+        /*
+        elements: [
+            { group:'nodes', data:{ id: 'n0'}},
+            { group:'nodes', data:{ id: 'n1'}},
+            { group:'edges', data:{ id: 'e0', source: 'n0', target: 'n1'} },
+            { group:'edges', data:{ id: 'e1', source: 'n1', target: 'n2'} },        
+        */
+        let elements = [];
+        for(var c in concepts) {
+            console.log("CONCEPTS");
+            console.log(concepts);
+            elements.push({ group:'nodes', data:{ id: concepts[c].id }  });
+        }
+        for(var n in connections) {
+            console.log("CONNECTIONS");
+            console.log(connections[n]);
+            elements.push({ group:'edges', data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV }  });
+        }
+
+        return elements;
     }
 };

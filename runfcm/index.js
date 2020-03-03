@@ -33,7 +33,7 @@ module.exports = function (context, req) {
 
         client.open().then(() =>{
             client.submit("g.V().has('modelName', name).bothE().otherV().path()", { name: inputs.modelName }).then(function (result) {
-                console.log("Result: %s\n", JSON.stringify(result._items));
+                //console.log("Result: %s\n", JSON.stringify(result._items));
 
                 concepts = structureBuilder.buildConcepts(result._items, inputs);
                 connections = structureBuilder.buildConnections(result._items, concepts);
