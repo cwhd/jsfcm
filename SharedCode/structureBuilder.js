@@ -13,10 +13,12 @@ module.exports = {
                 var currentObject = data[i].objects[j];
                 var alreadyThere = concepts.find(obj => obj.id == currentObject.id);
                 if (currentObject.type == "vertex" && !alreadyThere) {
-                    var inputValue = inputs.values.find(inp => inp.node == currentObject.id);
+                    if(inputs.values) {
+                        var inputValue = inputs.values.find(inp => inp.node == currentObject.id);
+                        currentObject.value = inputValue.value;
+                    }
                     currentObject.connections = [];
                     currentObject.previousValue = 0;
-                    currentObject.value = inputValue.value;
                     currentObject.nextValue = 0;
                     concepts.push(currentObject);
                 } 
@@ -51,7 +53,6 @@ module.exports = {
     },
 
     buildCytoStructure: function(concepts, connections) {
-        //TODO return something like this:
         /*
         elements: [
             { group:'nodes', data:{ id: 'n0'}},
@@ -59,18 +60,16 @@ module.exports = {
             { group:'edges', data:{ id: 'e0', source: 'n0', target: 'n1'} },
             { group:'edges', data:{ id: 'e1', source: 'n1', target: 'n2'} },        
         */
-        let elements = [];
+        //let elements = [];
+        let nodes = [];
+        let edges = [];
         for(var c in concepts) {
-            console.log("CONCEPTS");
-            console.log(concepts);
-            elements.push({ group:'nodes', data:{ id: concepts[c].id }  });
+            nodes.push({ data:{ id: concepts[c].id, name: concepts[c].id }  });
         }
         for(var n in connections) {
-            console.log("CONNECTIONS");
-            console.log(connections[n]);
-            elements.push({ group:'edges', data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV }  });
+            edges.push({ data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV, label: connections[n].label }  });
         }
 
-        return elements;
+        return { nodes: nodes, edges: edges };
     }
 };
