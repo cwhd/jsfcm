@@ -67,7 +67,13 @@ module.exports = {
             nodes.push({ data:{ id: concepts[c].id, name: concepts[c].id }  });
         }
         for(var n in connections) {
-            edges.push({ data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV, label: connections[n].label }  });
+            let thisEdge = { data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV, label: connections[n].label } };
+            let props = Object.keys(connections[n].properties);
+            for(var p in props) {
+                thisEdge.data[props[p]] = connections[n].properties[props[p]];
+            }
+
+            edges.push(thisEdge);
         }
 
         return { nodes: nodes, edges: edges };

@@ -4,7 +4,7 @@ const client = require("../SharedCode/db/gremlin-api-db")
 module.exports = function (context, req) {
 
     context.log('Getting FCM');
-    console.log(process.env["cosmosEndpoint"]);
+    //console.log(process.env["cosmosEndpoint"]);
 
     if (!req.body) {
         context.res = {
