@@ -64,7 +64,16 @@ module.exports = {
         let nodes = [];
         let edges = [];
         for(var c in concepts) {
-            nodes.push({ data:{ id: concepts[c].id, name: concepts[c].id }  });
+            console.log("CNCEP");
+            //console.log(concepts[c]);
+            let thisNode = { data:{ id: concepts[c].id, name: concepts[c].id }};
+            console.log(concepts[c].properties);
+            if(concepts[c].properties.x && concepts[c].properties.y) {
+                console.log(concepts[c].properties.x);
+                thisNode.data.x = concepts[c].properties.x[0].value;
+                thisNode.data.y = concepts[c].properties.y[0].value;
+            }
+            nodes.push(thisNode);
         }
         for(var n in connections) {
             let thisEdge = { data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV, label: connections[n].label } };
