@@ -15,7 +15,7 @@ module.exports = function (context, req) {
         let inputs = req.body; 
 
         let concepts = [];
-        let connections = []; 
+        let connections = [];
 
         client.open().then(() =>{
             client.submit("g.V().has('modelName', name).bothE().otherV().path()", { name: inputs.modelName }).then(function (result) {

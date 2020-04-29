@@ -41,9 +41,10 @@ module.exports = {
                 var isInConnectionArray = connections.find(obj => obj.id == currentObject.id);
                 if (currentObject.type == "edge" && !isInConnectionArray) {
                     connections.push(currentObject);
-                    var parentVector = concepts.find(obj => obj.id == currentObject.inV);
+                    var parentVector = concepts.find(obj => obj.id == currentObject.outV);
                     var alreadyThere = parentVector.connections.find(obj => obj.id == currentObject.id);
                     if(!alreadyThere) {
+                        //console.log(currentObject);
                         parentVector.connections.push(currentObject);
                     }    
                 }
@@ -53,38 +54,46 @@ module.exports = {
     },
 
     buildCytoStructure: function(concepts, connections) {
-        /*
-        elements: [
-            { group:'nodes', data:{ id: 'n0'}},
-            { group:'nodes', data:{ id: 'n1'}},
-            { group:'edges', data:{ id: 'e0', source: 'n0', target: 'n1'} },
-            { group:'edges', data:{ id: 'e1', source: 'n1', target: 'n2'} },        
-        */
-        //let elements = [];
+        //console.log("CONCEPTS:");
+        //console.log(concepts);
+        //console.log("CONNECTIONS:");
+        //console.log(connections);
         let nodes = [];
         let edges = [];
         for(var c in concepts) {
-            console.log("CNCEP");
+            //console.log("CNCEP");
             //console.log(concepts[c]);
             let thisNode = { data:{ id: concepts[c].id, name: concepts[c].id }};
-            console.log(concepts[c].properties);
+            //console.log(concepts[c].properties);
             if(concepts[c].properties.x && concepts[c].properties.y) {
-                console.log(concepts[c].properties.x);
+                //console.log(concepts[c].properties.x);
                 thisNode.data.x = concepts[c].properties.x[0].value;
                 thisNode.data.y = concepts[c].properties.y[0].value;
             }
             nodes.push(thisNode);
         }
+        console.log("CONNEC...");
+        //console.log(connections);
         for(var n in connections) {
-            let thisEdge = { data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV, label: connections[n].label } };
+            //console.log("CONNEC...");
+            //console.log(n);
+            //console.log(connections[n]);
+            //let thisEdge = { data:{ id: connections[n].id, source: connections[n].inV, target: connections[n].outV, label: connections[n].label } };
+            let thisEdge = { data:{ id: connections[n].id, source: connections[n].outV, target: connections[n].inV } };
+            if(connections[n].label) {
+                thisEdge.data["label"] = connections[n].label;
+            }
             let props = Object.keys(connections[n].properties);
             for(var p in props) {
                 thisEdge.data[props[p]] = connections[n].properties[props[p]];
             }
 
+            console.log("PUSHING");
             edges.push(thisEdge);
         }
-
+        console.log("DONE WITH CONNECTIONS...");
+        //console.log(nodes);
+        //console.log(edges);
         return { nodes: nodes, edges: edges };
     }
 };
