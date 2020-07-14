@@ -37,6 +37,10 @@ module.exports = function (context, req) {
 
                 concepts = structureBuilder.buildConcepts(result._items, inputs);
                 connections = structureBuilder.buildConnections(result._items, concepts);
+                console.log("------CONCEPTS-------");
+                console.log(concepts.length);
+                console.log("------CONNECTIONS-------");
+                console.log(connections.length);
             
                 for(var e = 0; e < epochs; e++) {
                     concepts = fcmBaseCalculator.initialValueCalculation(concepts);
@@ -44,6 +48,8 @@ module.exports = function (context, req) {
                     switch(inputs.act.toLowerCase()) {
                         case "gaussian":
                             concepts = squashingFunctions.gaussian(concepts);
+                            console.log("------CONCEPTS AFTER SQUASH-------");
+                            console.log(concepts.length);
                     }
             
                     for (var c in concepts) {
