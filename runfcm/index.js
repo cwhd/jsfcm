@@ -27,7 +27,8 @@ module.exports = function (context, req) {
 
         let cDate = "";
         if(Object.prototype.toString.call(inputs.createDate === '[object Date]')) {
-            cDate = inputs.createDate.toISOString();
+            let tempDate = new Date(inputs.createDate);
+            cDate = tempDate.toISOString();
         } else {
             cDate = inputs.createDate;
         }
