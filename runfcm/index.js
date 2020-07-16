@@ -25,15 +25,22 @@ module.exports = function (context, req) {
         */
         let inputs = req.body;
 
+        let cDate = "";
+        if(Object.prototype.toString.call(inputs.createDate === '[object Date]')) {
+            cDate = inputs.createDate.toISOString();
+        } else {
+            cDate = inputs.createDate;
+        }
+
         let concepts = [];
         let connections = [];
 
         let results = [];
         let epochs = inputs.epochs;
-
+        //TODO check if date is a string, if it is not convert it
         client.open().then(() =>{
-            client.submit("g.V().has('modelName', name).bothE().otherV().path()", { name: inputs.modelName }).then(function (result) {
-                //console.log("Result: %s\n", JSON.stringify(result._items));
+            client.submit("g.V().has('modelName', name).has('createDate', createDate).bothE().otherV().path()", { name: inputs.modelName, createDate: cDate }).then(function (result) {
+                console.log("Result: %s\n", JSON.stringify(result._items));
 
                 concepts = structureBuilder.buildConcepts(result._items, inputs);
                 connections = structureBuilder.buildConnections(result._items, concepts);
